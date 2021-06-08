@@ -1,0 +1,193 @@
+{%load static %}
+<!DOCTYPE HTML>
+<html>
+<head>
+
+ <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+	<link rel="Stylesheet" type="text/css" href="{% static '/css/try.css'%}">
+    <link rel="Stylesheet" type="text/css" href="{% static '/css/footer.css'%}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="Stylesheet" type="text/css" href="{% static '/css/header.css'%}">
+	<link rel="Stylesheet" type="text/css" href="{% static 'css/back.css'%}">
+  <script src="{% static 'js/try.js' %}"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<header>
+    <div>
+        <ul id="firstthree">
+            <h4 id="a">
+                <a href="#" style="text-decoration: none; color:black">HOME</a>
+            </h4>
+            <h4 id="b">
+                <a href="#" style="text-decoration: none; color:black">PORTFOLIO</a>
+            </h4>
+            <h4 id="c">
+                <a href="#" style="text-decoration: none; color:black">ABOUT US</a>
+            </h4>
+        </ul>
+    </div>
+    <div>
+        <ul id="logo">
+            <a href="#" style="text-decoration: none;"><img src="{% static 'Images/logo.png'%}" width="430" height="430"></a>
+        </ul>
+    </div>
+    <div>
+        <ul id="lastthree">
+            <h4 id="d">
+                <a href="#" style="text-decoration: none; color:black">STORE</a>
+            </h4>
+            <h4 id="e">
+                <a href="#" style="text-decoration: none; color:black">CONTACT</a>
+            </h4>
+            <h4 id="f">
+                <a href="#" style="text-decoration: none; color:black">ACCOUNT</a>
+            </h4>
+        </ul>
+    </div>
+</header>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+<body>
+ 
+  <br>
+  <br>
+<div id="body-wrapper ">  
+<div class="background">
+  <div class="container">
+    <div class="screen">
+      <div class="screen-header">
+        <div class="screen-header-left">
+          <div class="screen-header-button close"></div>
+          <div class="screen-header-button maximize"></div>
+          <div class="screen-header-button minimize"></div>
+        </div>
+        <div class="screen-header-right">
+          <div class="screen-header-ellipsis"></div>
+          <div class="screen-header-ellipsis"></div>
+          <div class="screen-header-ellipsis"></div>
+        </div>
+      </div>
+      
+      <div class="screen-body">
+        <div class="screen-body-item left">
+          <div class="app-title">
+            <span>CONTACT</span> 
+            <span>US</span>
+          </div>
+		   <img src="{%static 'Images/contactimg2.png' %}" width="220" height="250">
+          <div class="app-contact">We are here to present you the best of all.</div>
+        </div>
+        <div class="screen-body-item">
+        <div id="error_message"></div>
+          <form id="myform" method="POST" onsubmit="return validate();">
+              {% csrf_token %}
+            <div class="app-form">
+              <div class="app-form-group Name">
+                <input class="app-form-control" name="message_name" placeholder="NAME" id="message_name">
+              </div>
+              <div class="app-form-group Email ">
+                <input class="app-form-control" name="message_email" placeholder="EMAIL" id="message_email" >
+              </div>
+              <div class="app-form-group contact NO">
+                <input class="app-form-control" name="message_number" placeholder="CONTACT NO" id="message_number">
+              </div>
+              <div class="app-form-group message">
+                <input class="app-form-control" name="message" placeholder="MESSAGE" id="message">
+              </div>
+              <div class="app-form-group buttons">
+                <button class="app-form-button">SEND</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+   
+    <div class="credits">
+      <a class="credits-link" href="https://dribbble.com/shots/2666271-Contact" target="_blank">
+          <g stroke="#ffffff" fill="none">
+            <circle cx="100" cy="100" r="90" stroke-width="20"></circle>
+            <path d="M62.737004,13.7923523 C105.08055,51.0454853 135.018754,126.906957 141.768278,182.963345" stroke-width="20"></path>
+            <path d="M10.3787186,87.7261455 C41.7092324,90.9577894 125.850356,86.5317271 163.474536,38.7920951" stroke-width="20"></path>
+            <path d="M41.3611549,163.928627 C62.9207607,117.659048 137.020642,86.7137169 189.041451,107.858103" stroke-width="20"></path>
+          </g>	
+      </a>
+    </div>
+  
+</div>
+</div>
+</div>
+<div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+					<li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    </div >
+    
+    <div class="footer-basic">
+      
+	  <hr class="solid">
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.862032272937!2d75.7193632140898!3d16.83319922298344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc6558271669053%3A0x3eec8d8a33cbe61c!2sLUCKY%20STUDIO%20VIJAYAPUR!5e0!3m2!1sen!2sin!4v1622877564199!5m2!1sen!2sin" width="250" height="80" style="border:110;" loading="lazy" margin-left= "1;"></iframe>
+        </div> 
+        <footer id="footer">
+            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+			<ul class="list-inline">
+                <li class="list-inline-item"><a href="#">About us</a></li>
+            
+				<br>
+		    <br>
+            
+				<div class="kilimanjaro_single_contact_info">
+                                <h6><i class="fa fa-phone"></i>  Phone:<h6
+                                <h6><p>9731311012</p></h6>
+                            </div>
+								<div class="kilimanjaro_single_contact_info">                           
+									<h6><i class="fa fa-at"></i> Email:</h6>
+								   <h6> <p>luckystodio@gmail.com</p></h6>
+                 <br>
+              
+                </div>
+              
+            </ul>
+            
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- <script>
+       $("#SEND").click(function(){
+	    
+        al
+      // var message_name=$("#message_name").val();
+      // var message_number=$("#message_number").val();
+      // var message_email=$("#message_email").val();
+      
+      } 
+       )
+    </script> -->
+</div>
+</body>
+</html>
